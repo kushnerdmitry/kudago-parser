@@ -1,2 +1,9 @@
-*.class
-*.log
+target/
+
+.sbtopts
+
+# intellij
+.idea/
+
+# Ignore [ce]tags files
+tags
