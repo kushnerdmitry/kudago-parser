@@ -1,9 +1,5 @@
 target/
-
 .sbtopts
-
-# intellij
 .idea/
-
-# Ignore [ce]tags files
+null/
 tags
