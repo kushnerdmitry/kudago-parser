@@ -1,24 +1,22 @@
-ThisBuild / scalaVersion := "2.13.6"
+name    := "kudago-parser"
+version := "0.1"
 
-ThisBuild / scalacOptions ++= Seq(
+scalaVersion := "2.13.6"
+
+scalacOptions ++= Seq(
   "-Xfatal-warnings",
   "-deprecation",
   "-unchecked",
   "-feature",
   "-language:implicitConversions",
   "-language:higherKinds",
-  "-language:postfixOps",
-  "-Ypartial-unification"
+  "-language:postfixOps"
 )
 
-lazy val root = (project in file(".")).settings(
-  name    := "kudago-parser",
-  version := "0.1",
-  libraryDependencies ++= Seq(
-    Dependencies.catsCore,
-    Dependencies.catsEffect,
-    Dependencies.doobie,
-    Dependencies.pureConfig,
-    Dependencies.http4s
-  ).flatten
-)
+libraryDependencies ++= Seq(
+  Dependencies.catsCore,
+  Dependencies.catsEffect,
+  Dependencies.doobie,
+  Dependencies.pureConfig,
+  Dependencies.http4s
+).flatten
